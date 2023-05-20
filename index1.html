@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .scrollbar
+{
+	margin-left: 30px;
+	float: left;
+	height: 300px;
+	width: 65px;
+	background: #F5F5F5;
+	overflow-y: scroll;
+	margin-bottom: 25px;
+}
+
+.overflow-auto
+{
+	min-height: 450px;
+}
+  ::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #D62929;
+}
+    </style>
+    <meta charset="UTF-8">
+    <title>Bootstrap Project</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body> 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Logo</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index1.html">Menu</a>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index2.html">List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index3.html">Images</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index4.html">Paragraph</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index5.html">Form</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <br><br>
+    <h2 align="center">Links to all the menu items as buttons</h2>
+    <br>
+   <div class="d-grid gap-2 col-6 mx-auto" align="center">
+       <button class="btn btn-primary" type="button" href="index2.html">List</button>
+    </div>
+     <br>
+      <div class="d-grid gap-2 col-6 mx-auto" align="center">
+        <button class="btn btn-primary" type="button" href="index3.html">Images</button>
+      </div>
+       <br>
+       <div class="d-grid gap-2 col-6 mx-auto" align="center">
+        <button class="btn btn-primary" type="button" href="index4.html">Paragraph</button>
+       </div>
+        <br>
+       <div class="d-grid gap-2 col-6 mx-auto" align="center">
+        <button class="btn btn-primary" type="button" href="index5.html">Form</button>
+       </div>
+     <br>
+     <div class="overflow-auto" id="webkit-scrollbar"></div>
+    <!-- Include jQuery first, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

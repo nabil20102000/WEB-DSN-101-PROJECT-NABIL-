@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .scrollbar
+{
+	margin-left: 30px;
+	float: left;
+	height: 300px;
+	width: 65px;
+	background: #F5F5F5;
+	overflow-y: scroll;
+	margin-bottom: 25px;
+}
+
+.overflow-auto
+{
+	min-height: 450px;
+}
+  ::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #D62929;
+}
+h1 {
+            text-align: center; /* Center the header text */
+         }
+         p {
+            text-align: center; /* Center the paragraph text */
+         }
+         .custom-container {
+            width: 100%;
+            padding: 20px;
+         }
+         .my-custom-class { /* Updated class name */
+            width: 100%;
+            padding: 20px;
+         }
+         .header {
+            text-align: left; /* Lef-align the header text */
+         }
+         .paragraph {
+            text-align: justify; /* Justify the paragraph text */
+         }
+    </style>
+    <meta charset="UTF-8">
+    <title>Bootstrap Project</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Logo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index1.html">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index2.html">List</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index3.html">Images</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="index4.html">Paragraph</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index5.html">Form</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container">
+        <h1>Bangladesh</h1>
+        <p>Bangladesh is a country located in South Asia. It shares its borders with India and Myanmar. The country has a diverse landscape, ranging from the world's largest mangrove forest to the world's longest natural sea beach. Bangladesh has a population of over 160 million people and is the eighth-most populous country in the world.</p>
+     </div>
+     <br><br>
+     <div class="container-fluid custom-container">
+      <h1>Bangladesh</h1>
+         <p>Bangladesh is a country located in South Asia. It shares its borders with India to the north, east, and west, Myanmar to the southeast, and the Bay of Bengal to the south. The country has a rich cultural heritage, with a history that dates back over 2,000 years. Bangladesh is known for its beautiful landscapes, including the world's largest delta and the world's longest natural sea beach. Its diverse geography ranges from the Himalayas in the north to the hills and rivers in the east and the mangrove forests in the south. Bangladesh has a population of over 164.7 million people, making it the eighth-most populous country in the world, and the third-most populous country in South Asia after India and Pakistan. The official language of Bangladesh is Bengali, which is spoken by the vast majority of the population. Bangladesh is a secular country, with Islam as the dominant religion. The country has made significant progress in recent years in areas such as economic development, education, and healthcare. The Bangladesh economy has grown at an average rate of 6% over the past decade, and the country has made impressive gains in poverty reduction. Bangladesh is also known for its contributions to the global textile industry, with ready-made garments being the country's largest export item. Bangladesh is a member of the United Nations, the World Trade Organization, and the South Asian Association for Regional Cooperation (SAARC).</p>
+      </div>
+      <br><br>
+      <div class="container-fluid my-custom-class">
+        <h1>Google Software Engineer</h1>
+        <p class="paragraph">A software engineer at Google is responsible for designing, developing, and maintaining software systems that are used by millions of people around the world. They work on a wide range of projects, including developing new features for existing products, building new products from scratch, and improving the performance and reliability of Google's infrastructure. Google software engineers are expected to be experts in several programming languages and have a deep understanding of software development best practices, such as continuous integration and deployment, Agile development methodologies, and code review processes.</p>
+        <p class="paragraph">One of the key responsibilities of a Google software engineer is to work collaboratively with other engineers, product managers, and designers to gather requirements, design solutions, and ensure that the resulting software meets the needs of users. At Google, software engineers are also expected to be proactive in identifying areas for improvement and developing new products and features that can benefit users. They are also responsible for writing clean, efficient, and maintainable code that can be easily understood by other developers and is scalable to meet the demands of Google's growing user base.</p>
+        <p class="paragraph">In addition to technical skills, Google software engineers are also expected to have strong communication and collaboration skills. They need to be able to work well in a team environment and communicate with technical and non-technical stakeholders effectively. They also need to be able to manage their own time and prioritize tasks effectively, as Google operates in a fast-paced, dynamic environment where priorities can change quickly.</p>
+     </div>
+      <div class="overflow-auto" id="webkit-scrollbar"></div>
+    <!-- Include jQuery first, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
