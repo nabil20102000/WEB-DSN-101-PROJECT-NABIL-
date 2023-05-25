@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML,CSS & JS PROJECT</title>
+    <style>
+      /* CSS for Navigation Bar */
+      ::selection {
+    background: red;
+    color: white;
+}
+
+      body {
+        scrollbar-width: none;
+        background: linear-gradient(to bottom, #00bfff, #9400d3);
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #333;
+        color: #fff;
+        height: 60px;
+      }
+      nav a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        margin: 0 20px;
+      }
+      nav a:hover {
+        color: #ccc;
+      }
+ .scrollbar {
+  height: 600px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #008000 #F5F5F5;
+}
+.scrollbar::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #008000;
+}
+.form-container {
+        width: 50%;
+        margin: 0 auto; /* Center the form */
+        padding: 20px;
+        background-color: #f2f2f2;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px #666;
+      }
+      label {
+        font-weight: bold;
+      }
+      input[type=text], input[type=email] {
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      input[type=submit]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <a href="index1.html">List</a>
+      <a href="index2.html">Images</a>
+      <a href="index3.html">Paragraph</a>
+      <a href="index4.html">Form</a>
+    </nav>
+    <br><br>
+    <div class="form-container">
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name">
+        </div>
+        &nbsp;&nbsp;
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email">
+        </div>
+        &nbsp;&nbsp;
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="text" id="age" name="age" placeholder="Enter your age">
+        </div>
+        &nbsp;&nbsp;
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+          &nbsp;&nbsp;&nbsp;
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" placeholder="Enter your address">
+          </div>
+          &nbsp;&nbsp;
+          <div class="form-group">
+            <label for="relationship-status">Relationship Status</label>
+            <select id="relationship-status" name="relationship-status">
+              <option value="single">Single</option>
+              <option value="married">Married</option>
+              <option value="divorced">Divorced</option>
+              <option value="widowed">Widowed</option>
+            </select>
+          </div>
+          &nbsp;&nbsp;
+          <div class="form-group">
+            <label for="phone-number">Phone Number</label>
+            <input type="text" id="phone-number" name="phone-number" placeholder="Enter your phone number">
+          </div>
+          &nbsp;&nbsp;
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" placeholder="Enter your city">
+          </div>
+        </div>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    <div class="scrollbar">
+    </div>
+    <!-- JavaScript for Navigation Bar -->
+    <script>
+      const links = document.querySelectorAll("nav a");
+const contentDivs = document.querySelectorAll(".content");
+ links.forEach((link, index) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    // Hide all content divs
+    contentDivs.forEach((div) => {
+      div.style.display = "none";
+    });
+    // Show the content div with the matching index
+    contentDivs[index].style.display = "block";
+  });
+});
+    </script>
+  </body>
+</html>

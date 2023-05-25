@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML,CSS & JS PROJECT</title>
+    <style>
+      /* CSS for Navigation Bar */
+      ::selection {
+    background: red;
+    color: white;
+}
+
+      body {
+        scrollbar-width: none;
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #333;
+        color: #fff;
+        height: 60px;
+      }
+      nav a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        margin: 0 20px;
+      }
+      nav a:hover {
+        color: #ccc;
+      }
+ .scrollbar {
+  height: 600px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #008000 #F5F5F5;
+}
+.scrollbar::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #008000;
+}
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <a href="index1.html">List</a>
+      <a href="index2.html">Images</a>
+      <a href="index3.html">Paragraph</a>
+      <a href="index4.html">Form</a>
+    </nav>
+
+    <div style="text-align: center;">
+      <h1 align="center">Twitter CEO</h1>
+      <p>
+      As the CEO of Twitter, you have a great responsibility to ensure that the platform is operating ethically and in the best interests of users and society as a whole. Your decisions can have far-reaching consequences, as interactions on Twitter can shape public opinion, influence political outcomes, and impact global events. For example, Twitter has been a powerful tool for the #MeToo movement and for organizing protests against oppressive regimes, but it has also been used to spread dangerous misinformation and hate speech. As CEO, you must weigh these issues carefully and make informed decisions that prioritize the safety and well-being of all users, while upholding the principles of free speech and open communication. </p>
+    </div>
+<br><br>
+    <div style="text-align: center;">
+      <h1 align="left">Google CEO</h1>
+      <p>
+      As the CEO of Google, you have a great responsibility to lead one of the world's most influential technology companies. Your decisions can have a huge impact on the world, since Google products and services are used by billions of people every day. As CEO, you'll be responsible for setting the direction of the company and making strategic decisions that will shape its future, including product development, marketing, and operations. You'll also need to balance the needs of Google's many stakeholders - from shareholders and employees to users and the broader public - to ensure that the company is fulfilling its mission to organize the world's information and make it universally accessible and useful. With great power comes great responsibility, as they say, and the role of Google CEO is no exception.</p>
+    </div>
+    <br><br>
+    <div style="text-align: justify;">
+      <h1>Facebook CEO</h1>
+<p>As the CEO of Facebook, the world's largest social media platform, you have a tremendous responsibility for shaping the way people interact and communicate online. Your decisions impact the lives of more than 3 billion users around the globe, and the influence of Facebook's platforms on public discourse, political events, and cultural norms is enormous. As CEO, you must balance the needs of users, advertisers, and stakeholders while navigating complex issues like privacy, security, and free speech. Your leadership sets the tone for Facebook, its products and services, and the culture of the company itself. A successful Facebook CEO drives growth, innovation, and positive impact while maintaining the trust of users and the broader public.</p>
+    </div>
+    <br><br>
+    <div style="text-align: justify;">
+      <h1 align="right">President of the United States</h1>
+<p>
+As the President of the United States, you hold one of the most powerful and influential positions in the world. Your decisions have an impact on domestic and international policies, the economy, and the lives of millions of people. As such, you have a great responsibility to lead the country in a manner that upholds the values and principles of democracy, justice, and equality. You must work to address critical issues such as climate change, national security, healthcare, and education, while balancing the interests of various stakeholders, including citizens, businesses, and foreign governments. The decisions you make can have a profound effect on the state of our nation, and the world at large. The role of President requires steadfast leadership, exceptional communication skills, and the ability to make difficult decisions in times of crisis. </p>
+    </div>
+    <div class="scrollbar">
+    </div>
+    <!-- JavaScript for Navigation Bar -->
+    <script>
+      const links = document.querySelectorAll("nav a");
+const contentDivs = document.querySelectorAll(".content");
+ links.forEach((link, index) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    // Hide all content divs
+    contentDivs.forEach((div) => {
+      div.style.display = "none";
+    });
+    // Show the content div with the matching index
+    contentDivs[index].style.display = "block";
+  });
+});
+    </script>
+  </body>
+</html>

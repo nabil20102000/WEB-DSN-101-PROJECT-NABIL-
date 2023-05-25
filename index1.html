@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML,CSS & JS PROJECT</title>
+    <style>
+      /* CSS for Navigation Bar */
+      ::selection {
+    background: red;
+    color: white;
+}
+
+      body {
+        scrollbar-width: none;
+        background: linear-gradient(to bottom, #00bfff, #9400d3);
+      }
+    
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #333;
+        color: #fff;
+        height: 60px;
+      }
+      nav a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        margin: 0 20px;
+      }
+      nav a:hover {
+        color: #ccc;
+      }
+ .scrollbar {
+  height: 600px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #008000 #F5F5F5;
+}
+.scrollbar::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #008000;
+}
+    </style>
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <a href="index1.html">List</a>
+      <a href="index2.html">Images</a>
+      <a href="index3.html">Paragraph</a>
+      <a href="index4.html">Form</a>
+    </nav>
+  
+    <div class="scrollbar">
+  <ol>
+  <li>Brunei</li>
+  <li>Cambodia</li>
+  <li>East Timor</li>
+  <li>Indonesia</li>
+  <li>Laos</li>
+  <li>Malaysia</li>
+  <li>Myanmar (Burma)</li>
+  <li>Philippines</li>
+  <li>Singapore</li>
+  <li>Thailand</li>
+  <li>Vietnam</li>
+  <li>Oman</li>
+</ol>
+    </div>
+
+    <!-- JavaScript for Navigation Bar -->
+    <script>
+      const links = document.querySelectorAll("nav a");
+const contentDivs = document.querySelectorAll(".content");
+ links.forEach((link, index) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    // Hide all content divs
+    contentDivs.forEach((div) => {
+      div.style.display = "none";
+    });
+    // Show the content div with the matching index
+    contentDivs[index].style.display = "block";
+  });
+});
+    </script>
+  </body>
+</html>

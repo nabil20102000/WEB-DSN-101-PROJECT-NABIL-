@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML,CSS & JS PROJECT</title>
+    <style>
+      /* CSS for Navigation Bar */
+      ::selection {
+    background: red;
+    color: white;
+}
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #333;
+        color: #fff;
+        height: 60px;
+      }
+      nav a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        margin: 0 20px;
+      }
+      nav a:hover {
+        color: #ccc;
+      }
+      h1 {
+			text-align: center;
+			margin-top: 50px;
+		}
+		
+		p {
+			text-align: center;
+			padding: 20px;
+			font-size: 20px;
+		}
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <a href="index1.html">List</a>
+      <a href="index2.html">Images</a>
+      <a href="index3.html">Paragraph</a>
+      <a href="index4.html">Form</a>
+    </nav>
+
+    <h1>Welcome to the Website</h1>
+	<p>This website provides a variety of content, including lists, images, paragraphs, and forms.</p>
+    <!-- JavaScript for Navigation Bar -->
+    <script>
+      const links = document.querySelectorAll("nav a");
+const contentDivs = document.querySelectorAll(".content");
+ links.forEach((link, index) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    // Hide all content divs
+    contentDivs.forEach((div) => {
+      div.style.display = "none";
+    });
+    // Show the content div with the matching index
+    contentDivs[index].style.display = "block";
+  });
+});
+    </script>
+  </body>
+</html>

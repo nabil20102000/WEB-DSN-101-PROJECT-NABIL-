@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML,CSS & JS PROJECT</title>
+    <style>
+      /* CSS for Navigation Bar */
+      ::selection {
+    background: red;
+    color: white;
+}
+
+      body {
+        scrollbar-width: none;
+        background: linear-gradient(to bottom, #00bfff, #9400d3);
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #333;
+        color: #fff;
+        height: 60px;
+      }
+      nav a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        margin: 0 20px;
+      }
+      nav a:hover {
+        color: #ccc;
+      }
+ .scrollbar {
+  height: 600px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #008000 #F5F5F5;
+}
+.scrollbar::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #008000;
+}
+
+img {
+	display: block; /* Make images display as a block element */
+	margin: 0 auto; /* Center horizontally */
+	max-width: 100%; /* Make images responsive */
+	height: auto; /* Maintain aspect ratio */
+	border-radius: 10px; /* Add rounded corners */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add box shadow */
+}
+
+.container {
+	max-width: 800px; /* Set maximum width of container */
+	margin: 0 auto; /* Center container horizontally */
+	padding: 20px; /* Add padding */
+	background-color: #f0f0f0; /* Add background color */
+}
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <a href="index1.html">List</a>
+      <a href="index2.html">Images</a>
+      <a href="index3.html">Paragraph</a>
+      <a href="index4.html">Form</a>
+    </nav>
+    <div class="container">
+      <img src="download.jpg" alt="The Weeknd">
+      <br><br>
+      <img src="f9b9bf944ffc8143.jpg" alt="A picture of me">
+      <br><br>
+      <img src="IMG_20221220_231012.jpg" alt="Real Madrid">
+    </div>
+    <div class="scrollbar">
+    </div>
+    <!-- JavaScript for Navigation Bar -->
+    <script>
+      const links = document.querySelectorAll("nav a");
+const contentDivs = document.querySelectorAll(".content");
+ links.forEach((link, index) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    // Hide all content divs
+    contentDivs.forEach((div) => {
+      div.style.display = "none";
+    });
+    // Show the content div with the matching index
+    contentDivs[index].style.display = "block";
+  });
+});
+    </script>
+  </body>
+</html>
